@@ -56,11 +56,10 @@ def create_BOW(movies, title, features):
             else :
                 kw_dict[kw] += 1 
                 
-        for lang in lan:
-            if lang not in lan_dict:
-                lan_dict[lang] = 1
-            else :
-                lan_dict[lang] += 1
+        if lan not in lan_dict:
+            lan_dict[lan] = 1
+        else :
+            lan_dict[lan] += 1
             
         
     return gen_dict, kw_dict, lan_dict
